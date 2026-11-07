@@ -1,18 +1,19 @@
 package com.university.ums.unit;
 
-import com.university.ums.repository.RevokedTokenRepository;
-import com.university.ums.repository.UserAccountRepository;
-import com.university.ums.security.ActiveTokenValidator;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.when;
+
+import java.time.Instant;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.oauth2.jwt.Jwt;
 
-import java.time.Instant;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.when;
+import com.university.ums.repository.RevokedTokenRepository;
+import com.university.ums.repository.UserAccountRepository;
+import com.university.ums.security.ActiveTokenValidator;
 
 /** Unit test for {@link ActiveTokenValidator}: a logged-out (revoked) token must be rejected. */
 @ExtendWith(MockitoExtension.class)
