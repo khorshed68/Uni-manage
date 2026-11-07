@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.security.oauth2.jwt.Jwt;
 
 import com.university.ums.repository.RevokedTokenRepository;
 import com.university.ums.repository.UserAccountRepository;
