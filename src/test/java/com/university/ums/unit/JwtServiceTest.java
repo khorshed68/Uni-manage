@@ -1,23 +1,25 @@
 package com.university.ums.unit;
 
-import com.nimbusds.jose.jwk.source.ImmutableSecret;
-import com.university.ums.entity.Role;
-import com.university.ums.entity.UserAccount;
-import com.university.ums.security.JwtProperties;
-import com.university.ums.security.JwtService;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.nio.charset.StandardCharsets;
+import java.time.Duration;
+
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.security.oauth2.jose.jws.MacAlgorithm;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
 import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
 
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import java.nio.charset.StandardCharsets;
-import java.time.Duration;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import com.nimbusds.jose.jwk.source.ImmutableSecret;
+import com.university.ums.entity.Role;
+import com.university.ums.entity.UserAccount;
+import com.university.ums.security.JwtProperties;
+import com.university.ums.security.JwtService;
 
 /** Unit test for {@link JwtService}: issues a token and decodes it with the same key, no Spring context. */
 class JwtServiceTest {
