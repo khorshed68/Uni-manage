@@ -45,7 +45,7 @@ class TeacherServiceTest {
         verify(teacherRepository, never()).delete(any());
     }
 
-    @Test
+   @Test
     void unknownTeacherIdThrowsNotFound() {
         when(teacherRepository.findById(99L)).thenReturn(Optional.empty());
 
