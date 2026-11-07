@@ -48,7 +48,7 @@ class AccountServiceTest {
         assertEquals("karim@university.edu", account.getEmail());
     }
 
-    @Test
+      @Test
     void duplicateEmailIsRejected() {
         when(userRepository.existsByUsernameIgnoreCase("karim")).thenReturn(false);
         when(userRepository.existsByEmailIgnoreCase("karim@university.edu")).thenReturn(true);
