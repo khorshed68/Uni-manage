@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>University Management System</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+
+<!-- ============ Login ============ -->
+<section id="login-view" class="login-wrap" hidden>
+    <form id="login-form" class="card login-card" novalidate autocomplete="off">
+        <div class="brand">University Management System</div>
+        <h1>Sign in</h1>
+        <label>Email
+            <input name="email" type="email" autocomplete="off" required>
+        </label>
+        <label>Password
+            <input name="password" type="password" autocomplete="new-password" required>
+        </label>
+        <div id="login-error" class="alert error" hidden></div>
+        <button class="btn primary full" type="submit">Sign in</button>
+        <details class="demo">
+            <summary>Demo accounts</summary>
+            <table>
+                <tr><td>Admin</td><td><code>admin@university.edu</code></td><td><code>Admin@123</code></td></tr>
+                <tr><td>Teacher</td><td><code>teacher1@university.edu</code></td><td><code>Teacher@123</code></td></tr>
+                <tr><td>Student</td><td><code>student1@university.edu</code></td><td><code>Student@123</code></td></tr>
+            </table>
+        </details>
+    </form>
+</section>
+
+<!-- ============ App shell ============ -->
+<section id="app-view" hidden>
+    <header class="topbar">
+        <div class="brand">UMS</div>
+        <nav id="nav" class="tabs"></nav>
+        <div class="who">
+            <span id="who-name"></span>
+            <span id="who-role" class="badge"></span>
+            <button id="logout-btn" class="btn ghost small">Log out</button>
+        </div>
+    </header>
+    <main id="main" class="container"></main>
+</section>
+
+<!-- ============ Create / edit dialog ============ -->
+<dialog id="edit-dialog">
+    <form id="edit-form" class="dialog-body" novalidate>
+        <h2 id="edit-title"></h2>
+        <div id="edit-fields" class="grid"></div>
+        <div id="edit-error" class="alert error" hidden></div>
+        <div class="actions">
+            <button type="button" class="btn ghost" id="edit-cancel">Cancel</button>
+            <button type="submit" class="btn primary">Save</button>
+        </div>
+    </form>
+</dialog>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
