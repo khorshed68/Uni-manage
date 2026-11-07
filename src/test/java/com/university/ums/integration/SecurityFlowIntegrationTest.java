@@ -55,7 +55,6 @@ class SecurityFlowIntegrationTest {
                 .andExpect(status().isForbidden())
                 .andExpect(jsonPath("$.status").value(403));
     }
-
     @Test
     void tokenIsRejectedAfterLogout() throws Exception {
         String token = login("student1@university.edu", "Student@123");
