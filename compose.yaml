@@ -3,6 +3,9 @@
 # Values come from a .env file next to this one (copy .env.example to .env),
 # falling back to the defaults below.
 
+# Fixed project name: keeps the same containers and database volume even if this folder is renamed.
+name: universitymanagementsystem
+
 services:
   db:
     image: postgres:17-alpine
