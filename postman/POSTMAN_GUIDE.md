@@ -28,7 +28,7 @@ This guide shows how to check **every API request** of the project with Postman,
 1. Open **Postman**.
 2. If you already have an old **University Management System** collection in the left sidebar, right-click it, choose **Delete**, and confirm. Postman keeps its own copy and does not update it automatically, so an old copy will give wrong results.
 3. Press **Ctrl + O** (or click **Import**).
-4. Click **files**, go to `E:\University management system\postman\` and choose
+4. Click **files**, go to `E:\Uni manage\postman\` and choose
    **`University-Management-System.postman_collection.json`**.
 5. Click **Import**.
 6. In the left sidebar you now see **University Management System** with 7 folders:

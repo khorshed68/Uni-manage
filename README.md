@@ -1,6 +1,6 @@
 # University Management System
 
-[![CI](https://github.com/khorshed68/University-management-system/actions/workflows/ci.yml/badge.svg)](https://github.com/khorshed68/University-management-system/actions/workflows/ci.yml)
+[![CI](https://github.com/khorshed68/Uni-manage/actions/workflows/ci.yml/badge.svg)](https://github.com/khorshed68/Uni-manage/actions/workflows/ci.yml)
 
 A web application built with **Java Spring Boot**. It manages three kinds of university users (**Admins, Teachers and Students**) through a secured **REST API**, and adds a small browser interface on top. Access is protected by **Spring Security** with login, logout, BCrypt password hashing and role-based access control (RBAC). The whole system is containerized with **Docker** and runs together with a **PostgreSQL** database using **Docker Compose**.
 
@@ -922,7 +922,7 @@ The result appears in the repository's **Actions** tab and in the **CI** badge a
 ## 17. Project structure
 
 ```
-University management system/
+Uni manage/
 ├── src/main/java/com/university/ums/
 │   ├── UniversityManagementSystemApplication.java   Entry point (@SpringBootApplication, @EnableScheduling)
 │   ├── config/
